@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ styles 'style.css' }}">
+    <title>{{ title }}</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="./../../images/TravelooLogo.png" alt="Traveloo Logo" class="nav-logo">
+            <ul>
+                {{#if isSession }}
+                    <li><a href="{{ path 'trips/new' }}">Create Trip</a></li>
+                    <li><a href="{{ path 'trips' }}">Trips</a></li>
+                    <li><a href="{{ path 'logout' }}">Logout</a></li>
+                    <li><a href="{{ path 'users/:id' id }}"><img src="{{ profilePicture }}" class="profile-pic">Profile</a></li>
+                {{else}}
+                    <li><a href="{{ path '' }}">Home</a></li>
+                    <li><a href="{{ path 'register' }}">Register</a></li>
+                    <li><a href="{{ path 'login' }}">Login</a></li>
+                {{/if}}
+            </ul>
+        </nav>
+    </header>
+    <main>

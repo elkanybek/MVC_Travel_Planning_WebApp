@@ -1,0 +1,21 @@
+{{> Header }}
+
+<h1 id="registration-title">Registration Form</h1>
+
+{{#if errorMessage}}
+    <div id="error" style="background-color: red; font-weight: bold;">{{errorMessage}}</div>
+{{/if}}
+<img src="./../../images/shore.jpg" id="background-image"/>
+<form id="register-form" action="/users" method="POST">
+    <label for="username" id="label-username">Username:</label>
+    <input type="text" id="username" name="username"><br>
+    <label for="email" id="label-email">Email:</label>
+    <input type="email" id="email" name="email"><br>
+    <label for="password" id="label-password">Password:</label>
+    <input type="password" id="password" name="password"><br>
+    <label for="confirmPassword" id="label-confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword"><br>
+    <button type="submit" id="register-form-submit-button">Register</button>
+</form>
+
+{{> Footer}}

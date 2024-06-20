@@ -1,0 +1,31 @@
+{{> Header }}
+
+    <div id="messagebox">{{ message }}</div>
+    <img src="./../../images/niceView.jpg" id="background-image"/>
+    <div class="container">
+        <h1 id="user-title">Welcome {{user.username}}!</h1>
+
+        <form id="edit-user-form" action="/users/{{user.id}}/edit" method="POST">
+            
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" value="{{user.username}}">
+            <br/>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="{{user.email}}">
+            <br/>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <br/>
+
+            <label for="profilePicture">Picture profile URL:</label>
+            <input type="url" id="profilePicture" name="profilePicture" value="{{ profilePicture }}">
+            <br/>
+            
+            <button id="edit-user-form-submit-button" type="submit">Edit</button>
+        </form>
+
+    </div>
+
+{{> Footer}}

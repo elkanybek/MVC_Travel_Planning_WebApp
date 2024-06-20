@@ -1,0 +1,20 @@
+{{> Header }}
+
+<h1 id="login-title">Login</h1>
+
+{{#if error}}
+    <div id="error" style="background-color: red; font-weight: bold;">{{error}}</div>
+{{/if}}
+
+<img src="./../../images/hawaii.jpg" id="background-image"/>
+<form id="login-form" action="/login" method="POST">
+    <label for="email" id="label-email">Email:</label>
+    <input type="email" id="email" name="email" value="{{rememberedEmail}}"><br>
+    <label for="password" id="label-password">Password:</label>
+    <input type="password" id="password" name="password"><br>
+    <input type="checkbox" id="remember-me" name="remember">
+    <label for="remember-me" id="label-remember-me">Remember Me</label><br>
+    <button type="submit" id="login-form-submit-button">Login</button>
+</form>
+
+{{> Footer }}

@@ -1,0 +1,1030 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .nav-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 35px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.profile-pic {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+#homepage {
+    text-align: center;
+    position: relative;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    font-size: 8em;
+    color: #007bff;
+    font-family: 'Pacifico', cursive;
+    margin: 0;
+}
+
+#authors {
+    font-size: 3em;
+    font-family: 'Pacifico', cursive;
+    margin: 0;
+}
+
+#testimonial {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+footer {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    position: fixed;
+    bottom: 0; 
+}
+
+
+
+
+
+
+
+
+/* Registration */
+#register-form {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 400px;
+    margin: 50px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#register-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+#register-form input[type="email"],
+#register-form input[type="password"],
+#register-form input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#register-form button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#register-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#error {
+    color: white;
+    background-color: red;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+#registration-title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 4em;
+    font-family: 'Pacifico', cursive;
+    color: black;
+}
+
+#register-form {
+    background: #A0DEFF;
+    border: 1px solid #666;
+    padding: 20px;
+    max-width: 400px;
+    margin: 50px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#register-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: black;
+}
+
+#register-form input[type="email"],
+#register-form input[type="password"],
+#register-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#register-form button[type="submit"] {
+    background-color: rgb(59, 102, 161);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+    width: 100%;
+    height: 50px;
+}
+
+#register-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+/* Login */
+
+#login-title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 4em;
+    font-family: 'Pacifico', cursive;
+    color: black;
+}
+
+#background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 1;
+}
+
+#login-form {
+    background: #A0DEFF;
+    border: 1px solid #666;
+    padding: 20px;
+    max-width: 400px;
+    margin: 50px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#login-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: black;
+}
+
+#login-form input[type="email"],
+#login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#login-form input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#label-remember-me {
+    display: inline-block;
+    font-weight: bold;
+    color: #fff;
+}
+
+#login-form button[type="submit"] {
+    background-color: rgb(59, 102, 161);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+    width: 100%;
+    height: 50px;
+}
+
+#login-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#error {
+    color: white;
+    background-color: red;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+/* All Trips */
+#all-trips{
+    text-align: center;
+    margin-top: 20px;
+}
+
+#trips-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px auto;
+    width: 90%;
+}
+
+#planned-trips, #current-trips, #past-trips {
+    background-color: #444;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+}
+
+#planned-trips h2, #current-trips h2, #past-trips h2 {
+    color: #61dafb;
+}
+
+.trip-item {
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+.trip-item a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#new-trip-button {
+    background-color: #61dafb;
+    border: none;
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#new-trip-button:hover {
+    background-color: #21a1f1;
+}
+
+.trip-element{
+    padding: 1%;
+}
+
+
+
+
+
+
+
+
+/* Create Trip */
+
+#title-create-trip{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 4em;
+    font-family: 'Pacifico', cursive;
+    color: black;
+}
+
+#new-trip-form {
+    max-width: 900px;
+    margin: auto;
+    background: #6ba1bb;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #666;
+}
+
+#new-trip-form fieldset.grid {
+    border: #6ba1bb;
+    display: grid;
+    gap: 15px;
+}
+
+#new-trip-form label {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+}
+
+#new-trip-form input[type="text"],
+#new-trip-form input[type="date"],
+#new-trip-form textarea,
+#new-trip-form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+#new-trip-form input[type="submit"] {
+    background: rgb(166, 204, 195);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#new-trip-form input[type="submit"]:hover {
+    background: #6ba1bb;
+}
+
+#new-trip-form-submit-button{
+    margin-top: 20px;
+    background-color: #61dafb;
+    border: none;
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 100%;
+}
+/* Edit Trip Title */
+#title-edit-trip {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 4em;
+    font-family: 'Pacifico', cursive;
+    color: black;
+}
+
+/* Edit Trip Form */
+#edit-trip-form {
+    max-width: 900px;
+    margin: auto;
+    background: #6ba1bb;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #666;
+}
+
+#edit-trip-form fieldset.grid {
+    border: none;
+    display: grid;
+    gap: 15px;
+}
+
+#edit-trip-form label {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+}
+
+#edit-trip-form input[type="text"],
+#edit-trip-form input[type="date"],
+#edit-trip-form textarea,
+#edit-trip-form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+#edit-trip-form input[type="submit"] {
+    background: rgb(166, 204, 195);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#edit-trip-form input[type="submit"]:hover {
+    background: #6ba1bb;
+}
+
+#edit-trip-form-submit-button {
+    margin-top: 20px;
+    background-color: #61dafb;
+    border: none;
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+
+#edit-trip-form-submit-button:hover {
+    background-color: #4fb7e4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* User Profile */
+#edit-user-form {
+    background: #A0DEFF;
+    border: 1px solid #666;
+    padding: 20px;
+    max-width: 400px;
+    margin: 50px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#edit-user-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    font-family: 'Pacifico', cursive;
+}
+
+#edit-user-form input[type="text"],
+#edit-user-form input[type="email"],
+#edit-user-form input[type="password"],
+#edit-user-form input[type="url"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#edit-user-form button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#edit-user-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#error {
+    color: white;
+    background-color: red;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+#user-title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 4em;
+    font-family: 'Pacifico', cursive;
+    color: white;
+    font-family: 'Pacifico', cursive;
+}
+
+
+
+
+
+/* Trip View */
+#trip-view {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#trip-title {
+    font-size: 2em;
+    color: #333;
+    font-family: 'Pacifico', cursive;
+}
+
+#trip-description {
+    font-size: 1.5em;
+    color: #666;
+    margin-top: 10px;
+}
+
+#trip-status, #trip-start-date, #trip-end-date {
+    font-size: 1.2em;
+    color: #888;
+    margin-top: 10px;
+}
+
+#trip-status {
+    color: #d9534f;
+}
+
+
+
+/* Trip Other Users */
+#trip-other-users {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Forms */
+form {
+    margin-top: 20px;
+}
+
+form button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* Update Trip Form */
+#update-trip-form {
+    margin-bottom: 10px;
+}
+
+#edit-trip-form-submit-button {
+    background-color: #5bc0de;
+}
+
+#edit-trip-form-submit-button:hover {
+    background-color: #31b0d5;
+}
+
+/* Delete Trip Form */
+#delete-trip-form {
+    margin-bottom: 10px;
+}
+
+#delete-trip-form-submit-button {
+    background-color: #d9534f;
+}
+
+#delete-trip-form-submit-button:hover {
+    background-color: #c9302c;
+}
+
+/* Activity, Luggage, and Budget Buttons */
+a button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #6c757d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+a button:hover {
+    background-color: #5a6268;
+}
+
+/* Add User Form */
+#add-user-form {
+    margin-top: 20px;
+}
+
+#add-user-form label {
+    font-size: 1em;
+    color: #333;
+}
+
+#add-user-form input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#add-user-form button {
+    background-color: #A0DEFF;
+}
+
+#add-user-form button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* All Trips Title */
+#alltrips-title {
+    font-size: 2.5em;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Pacifico', cursive;
+}
+
+/* Trips List */
+#trips {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+#trips li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+#trips li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+#trips li a:hover {
+    text-decoration: underline;
+}
+
+/* Trip Element based on status */
+.trip-element[status="completed"] {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.trip-element[status="pending"] {
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+.trip-element[status="cancelled"] {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* List Activities Title */
+#list-activities-title {
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Pacifico', cursive;
+}
+
+/* Activities Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+thead th {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: left;
+    font-size: 1.2em;
+    border-bottom: 2px solid #ddd;
+}
+
+tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+tbody td {
+    padding: 10px;
+    font-size: 1em;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Delete Activity Form */
+#delete-activity-form button {
+    padding: 5px 10px;
+    font-size: 0.9em;
+    color: #fff;
+    background-color: #d9534f;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#delete-activity-form button:hover {
+    background-color: #c9302c;
+}
+
+/* New Activity Form */
+#new-activity-form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#new-activity-form label {
+    font-size: 1em;
+    color: white;
+}
+
+#new-activity-form input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#new-activity-form button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #A0DEFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#new-activity-form button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* List Luggages Title */
+#listluggages-title {
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Pacifico', cursive;
+}
+
+
+/* Specific Columns */
+#lugaggename, #luggagetype, #luggageamount {
+    width: 33.3%;
+}
+
+/* Delete Luggage Form */
+#delete-luggage-form button {
+    padding: 5px 10px;
+    font-size: 0.9em;
+    color: #fff;
+    background-color: #d9534f;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#delete-luggage-form button:hover {
+    background-color: #c9302c;
+}
+
+/* New Luggage Form */
+#new-luggage-form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#new-luggage-form label {
+    font-size: 1em;
+    color: white;
+    display: block;
+    margin-top: 10px;
+}
+
+#new-luggage-form input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+#new-luggage-form button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #A0DEFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto 0 auto; 
+}
+
+#new-luggage-form button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+/* List Budget Title */
+#listbudget-title {
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Pacifico', cursive;
+}
+
+/* Specific Columns */
+#budgettitle, #budgetamountspent, #budgetspendinglimit {
+    width: 33.3%;
+}
+
+/* Delete Budget Form */
+#delete-budget-form button {
+    padding: 5px 10px;
+    font-size: 0.9em;
+    color: #fff;
+    background-color: #d9534f;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#delete-budget-form button:hover {
+    background-color: #c9302c;
+}
+
+/* New Budget Form */
+#new-budget-form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#new-budget-form label {
+    font-size: 1em;
+    color: white;
+    display: block;
+    margin-top: 10px;
+}
+
+#new-budget-form input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+#new-budget-form button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #A0DEFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto 0 auto; 
+}
+
+#new-budget-form button:hover {
+    background-color: #8bcffb;
+}

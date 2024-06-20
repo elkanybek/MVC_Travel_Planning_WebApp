@@ -1,0 +1,17 @@
+{{> Header }}
+
+<h1 id="alltrips-title">All Trips</h1>
+ <img src="./../../images/iceland.jpg" id="background-image"/>
+{{#unless trips}}
+	<p id="error" style="background-color: red; font-weight: bold;">No trips found</p>
+{{else}}
+	<ol id="trips">
+		{{#each trips}}
+			<li class="trip-element" trip-id="{{ this.id }}" status="{{ this.status }}">
+				<a href="/trips/{{ this.id }}">{{ this.title }}</a>
+			</li>
+		{{/each}}
+	</ol>
+{{/unless}}
+
+{{> Footer}}

@@ -1,0 +1,20 @@
+{{> Header }}
+
+<h1>Add Budget</h1>
+
+<form method="POST" action="{{path 'trips'}}/{{ trip.id }}/budget" id="new-budget-form">
+	<fieldset class="grid">
+		<label>
+			Title
+			<input type="text" name="title">
+		</label>
+	</fieldset>
+    <label>
+			Limit
+			<input type="text" name="limit">
+	</label>
+
+	<input type="submit" value="Add" id="new-budget-form-submit-button">
+</form>
+
+{{> Footer}}

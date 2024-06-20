@@ -1,0 +1,271 @@
+{{> Header}}
+
+<h1 id="title-create-trip">Create Trip</h1>
+<img src="./../../images/beachView.jpg" id="background-image"/>
+<form method="POST" action="{{ path 'trips' }}" id="new-trip-form">
+    <fieldset class="grid">
+        <label for="trip-title">
+            Title
+            <input type="text" name="title" id="trip-title" required>
+        </label>
+        <label for="trip-description">
+            Description
+            <textarea name="description" id="trip-description" placeholder="Enter Description" required></textarea>
+        </label>
+        <label for="trip-status">
+            Status
+            <select name="status" id="trip-status" required>
+                <option value="planning">Planning</option>
+                <option value="ready">Ready</option>
+                <option value="in progress">In Progress</option>
+                <option value="complete">Complete</option>
+            </select>
+        </label>
+        <label for="trip-start-date">
+            Start Date
+            <input type="date" name="startDate" id="trip-start-date" required>
+        </label>
+        <label for="trip-end-date">
+            End Date
+            <input type="date" name="endDate" id="trip-end-date" required>
+        </label>
+        <label for="trip-countryId">
+            Country
+            <select name="countryId" id="trip-countryId" required>
+                <option value="1">Afghanistan - AF</option>
+                <option value="2">Albania - AL</option>
+                <option value="3">Algeria - DZ</option>
+                <option value="4">American Samoa - AS</option>
+                <option value="5">Andorra - AD</option>
+                <option value="6">Angola - AO</option>
+                <option value="7">Anguilla - AI</option>
+                <option value="8">Antarctica - AQ</option>
+                <option value="9">Antigua and Barbuda - AG</option>
+                <option value="10">Argentina - AR</option>
+                <option value="11">Armenia - AM</option>
+                <option value="12">Aruba - AW</option>
+                <option value="13">Australia - AU</option>
+                <option value="14">Austria - AT</option>
+                <option value="15">Azerbaijan - AZ</option>
+                <option value="16">Bahamas - BS</option>
+                <option value="17">Bahrain - BH</option>
+                <option value="18">Bangladesh - BD</option>
+                <option value="19">Barbados - BB</option>
+                <option value="20">Belarus - BY</option>
+                <option value="21">Belgium - BE</option>
+                <option value="22">Belize - BZ</option>
+                <option value="23">Benin - BJ</option>
+                <option value="24">Bermuda - BM</option>
+                <option value="25">Bhutan - BT</option>
+                <option value="26">Bosnia and Herzegovina - BA</option>
+                <option value="27">Botswana - BW</option>
+                <option value="28">Bouvet Island - BV</option>
+                <option value="29">Brazil - BR</option>
+                <option value="30">British Indian Ocean Territory - IO</option>
+                <option value="31">Brunei Darussalam - BN</option>
+                <option value="32">Bulgaria - BG</option>
+                <option value="33">Burkina Faso - BF</option>
+                <option value="34">Burundi - BI</option>
+                <option value="35">Cambodia - KH</option>
+                <option value="36">Cameroon - CM</option>
+                <option value="37">Canada - CA</option>
+                <option value="38">Cape Verde - CV</option>
+                <option value="39">Cayman Islands - KY</option>
+                <option value="40">Central African Republic - CF</option>
+                <option value="41">Chad - TD</option>
+                <option value="42">Chile - CL</option>
+                <option value="43">China - CN</option>
+                <option value="44">Christmas Island - CX</option>
+                <option value="45">Cocos (Keeling) Islands - CC</option>
+                <option value="46">Colombia - CO</option>
+                <option value="47">Comoros - KM</option>
+                <option value="48">Congo - CG</option>
+                <option value="49">Cook Islands - CK</option>
+                <option value="50">Costa Rica - CR</option>
+                <option value="51">Croatia - HR</option>
+                <option value="52">Cuba - CU</option>
+                <option value="53">Cyprus - CY</option>
+                <option value="54">Czech Republic - CZ</option>
+                <option value="55">Denmark - DK</option>
+                <option value="56">Djibouti - DJ</option>
+                <option value="57">Dominica - DM</option>
+                <option value="58">Dominican Republic - DO</option>
+                <option value="59">Ecuador - EC</option>
+                <option value="60">Egypt - EG</option>
+                <option value="61">El Salvador - SV</option>
+                <option value="62">Equatorial Guinea - GQ</option>
+                <option value="63">Eritrea - ER</option>
+                <option value="64">Estonia - EE</option>
+                <option value="65">Ethiopia - ET</option>
+                <option value="66">Falkland Islands (Malvinas) - FK</option>
+                <option value="67">Faroe Islands - FO</option>
+                <option value="68">Fiji - FJ</option>
+                <option value="69">Finland - FI</option>
+                <option value="70">France - FR</option>
+                <option value="71">French Guiana - GF</option>
+                <option value="72">French Polynesia - PF</option>
+                <option value="73">French Southern Territories - TF</option>
+                <option value="74">Gabon - GA</option>
+                <option value="75">Gambia - GM</option>
+                <option value="76">Georgia - GE</option>
+                <option value="77">Germany - DE</option>
+                <option value="78">Ghana - GH</option>
+                <option value="79">Gibraltar - GI</option>
+                <option value="80">Greece - GR</option>
+                <option value="81">Greenland - GL</option>
+                <option value="82">Grenada - GD</option>
+                <option value="83">Guadeloupe - GP</option>
+                <option value="84">Guam - GU</option>
+                <option value="85">Guatemala - GT</option>
+                <option value="86">Guernsey - GG</option>
+                <option value="87">Guinea - GN</option>
+                <option value="88">Guinea-Bissau - GW</option>
+                <option value="89">Guyana - GY</option>
+                <option value="90">Haiti - HT</option>
+                <option value="91">Heard Island and McDonald Islands - HM</option>
+                <option value="92">Holy See (Vatican City State) - VA</option>
+                <option value="93">Honduras - HN</option>
+                <option value="94">Hong Kong - HK</option>
+                <option value="95">Hungary - HU</option>
+                <option value="96">Iceland - IS</option>
+                <option value="97">India - IN</option>
+                <option value="98">Indonesia - ID</option>
+                <option value="99">Iran - IR</option>
+                <option value="100">Iraq - IQ</option>
+                <option value="101">Ireland - IE</option>
+                <option value="102">Isle of Man - IM</option>
+                <option value="103">Israel - IL</option>
+                <option value="104">Italy - IT</option>
+                <option value="105">Jamaica - JM</option>
+                <option value="106">Japan - JP</option>
+                <option value="107">Jersey - JE</option>
+                <option value="108">Jordan - JO</option>
+                <option value="109">Kazakhstan - KZ</option>
+                <option value="110">Kenya - KE</option>
+                <option value="111">Kiribati - KI</option>
+                <option value="112">Kuwait - KW</option>
+                <option value="113">Kyrgyzstan - KG</option>
+                <option value="114">Lao People's Democratic Republic - LA</option>
+                <option value="115">Latvia - LV</option>
+                <option value="116">Lebanon - LB</option>
+                <option value="117">Lesotho - LS</option>
+                <option value="118">Liberia - LR</option>
+                <option value="119">Libya - LY</option>
+                <option value="120">Liechtenstein - LI</option>
+                <option value="121">Lithuania - LT</option>
+                <option value="122">Luxembourg - LU</option>
+                <option value="123">Macao - MO</option>
+                <option value="124">Madagascar - MG</option>
+                <option value="125">Malawi - MW</option>
+                <option value="126">Malaysia - MY</option>
+                <option value="127">Maldives - MV</option>
+                <option value="128">Mali - ML</option>
+                <option value="129">Malta - MT</option>
+                <option value="130">Marshall Islands - MH</option>
+                <option value="131">Martinique - MQ</option>
+                <option value="132">Mauritania - MR</option>
+                <option value="133">Mauritius - MU</option>
+                <option value="134">Mayotte - YT</option>
+                <option value="135">Mexico - MX</option>
+                <option value="136">Monaco - MC</option>
+                <option value="137">Mongolia - MN</option>
+                <option value="138">Montenegro - ME</option>
+                <option value="139">Montserrat - MS</option>
+                <option value="140">Morocco - MA</option>
+                <option value="141">Mozambique - MZ</option>
+                <option value="142">Myanmar - MM</option>
+                <option value="143">Namibia - NA</option>
+                <option value="144">Nauru - NR</option>
+                <option value="145">Nepal - NP</option>
+                <option value="146">Netherlands - NL</option>
+                <option value="147">New Caledonia - NC</option>
+                <option value="148">New Zealand - NZ</option>
+                <option value="149">Nicaragua - NI</option>
+                <option value="150">Niger - NE</option>
+                <option value="151">Nigeria - NG</option>
+                <option value="152">Niue - NU</option>
+                <option value="153">Norfolk Island - NF</option>
+                <option value="154">Northern Mariana Islands - MP</option>
+                <option value="155">Norway - NO</option>
+                <option value="156">Oman - OM</option>
+                <option value="157">Pakistan - PK</option>
+                <option value="158">Palau - PW</option>
+                <option value="159">Panama - PA</option>
+                <option value="160">Papua New Guinea - PG</option>
+                <option value="161">Paraguay - PY</option>
+                <option value="162">Peru - PE</option>
+                <option value="163">Philippines - PH</option>
+                <option value="164">Pitcairn - PN</option>
+                <option value="165">Poland - PL</option>
+                <option value="166">Portugal - PT</option>
+                <option value="167">Puerto Rico - PR</option>
+                <option value="168">Qatar - QA</option>
+                <option value="169">Romania - RO</option>
+                <option value="170">Russian Federation - RU</option>
+                <option value="171">Rwanda - RW</option>
+                <option value="172">Saint Kitts and Nevis - KN</option>
+                <option value="173">Saint Lucia - LC</option>
+                <option value="174">Saint Martin (French part) - MF</option>
+                <option value="175">Saint Pierre and Miquelon - PM</option>
+                <option value="176">Saint Vincent and the Grenadines - VC</option>
+                <option value="177">Samoa - WS</option>
+                <option value="178">San Marino - SM</option>
+                <option value="179">Sao Tome and Principe - ST</option>
+                <option value="180">Saudi Arabia - SA</option>
+                <option value="181">Senegal - SN</option>
+                <option value="182">Serbia - RS</option>
+                <option value="183">Seychelles - SC</option>
+                <option value="184">Sierra Leone - SL</option>
+                <option value="185">Singapore - SG</option>
+                <option value="186">Sint Maarten (Dutch part) - SX</option>
+                <option value="187">Slovakia - SK</option>
+                <option value="188">Slovenia - SI</option>
+                <option value="189">Solomon Islands - SB</option>
+                <option value="190">Somalia - SO</option>
+                <option value="191">South Africa - ZA</option>
+                <option value="192">South Georgia and the South Sandwich Islands - GS</option>
+                <option value="193">South Sudan - SS</option>
+                <option value="194">Spain - ES</option>
+                <option value="195">Sri Lanka - LK</option>
+                <option value="196">State of Palestine - PS</option>
+                <option value="197">Sudan - SD</option>
+                <option value="198">Suriname - SR</option>
+                <option value="199">Svalbard and Jan Mayen - SJ</option>
+                <option value="200">Swaziland - SZ</option>
+                <option value="201">Sweden - SE</option>
+                <option value="202">Switzerland - CH</option>
+                <option value="203">Syrian Arab Republic - SY</option>
+                <option value="204">Tajikistan - TJ</option>
+                <option value="205">Thailand - TH</option>
+                <option value="206">Timor-Leste - TL</option>
+                <option value="207">Togo - TG</option>
+                <option value="208">Tokelau - TK</option>
+                <option value="209">Tonga - TO</option>
+                <option value="210">Trinidad and Tobago - TT</option>
+                <option value="211">Tunisia - TN</option>
+                <option value="212">Turkey - TR</option>
+                <option value="213">Turkmenistan - TM</option>
+                <option value="214">Turks and Caicos Islands - TC</option>
+                <option value="215">Tuvalu - TV</option>
+                <option value="216">Uganda - UG</option>
+                <option value="217">Ukraine - UA</option>
+                <option value="218">United Arab Emirates - AE</option>
+                <option value="219">United Kingdom - GB</option>
+                <option value="220">United States - US</option>
+                <option value="221">United States Minor Outlying Islands - UM</option>
+                <option value="222">Uruguay - UY</option>
+                <option value="223">Uzbekistan - UZ</option>
+                <option value="224">Vanuatu - VU</option>
+                <option value="225">Viet Nam - VN</option>
+                <option value="226">Wallis and Futuna - WF</option>
+                <option value="227">Western Sahara - EH</option>
+                <option value="228">Yemen - YE</option>
+                <option value="229">Zambia - ZM</option>
+                <option value="230">Zimbabwe - ZW</option>
+            </select>
+        </label>
+    </fieldset>
+    <input type="submit" value="Create" id="new-trip-form-submit-button">
+</form>
+
+{{> Footer}}

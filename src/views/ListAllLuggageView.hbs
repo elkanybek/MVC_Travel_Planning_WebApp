@@ -1,0 +1,47 @@
+{{> Header }}
+<img src="./../../images/pyramid.jpg" id="background-image"/>
+
+<h3 id="listluggages-title">Luggage:</h3>
+    <ul>
+        <table>
+                <thead>
+                    <tr>
+                        <th id="lugaggename">Name</th>
+                        <th id="luggagetype">Type</th>
+                        <th id="luggageamount">Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#if luggages }}
+                        {{#each luggages }}
+                            <tr luggage-id="{{ id }}">
+                                <td> {{ name }}</td>
+                                <td> {{ type }}</td>
+                                <td> {{ amount }}</td>
+                                <td>
+                                    <form id="delete-luggage-form" method="POST" action="/trips/{{ tripId }}/luggage/{{ id }}">
+                                        <input type="hidden" name="method" value="DELETE"> 
+                                        <button>Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        {{/each}}
+                    {{/if}}
+                </tbody>
+        </table>
+    </ul>
+    <br>
+
+<form id="new-luggage-form" method="POST" action="/trips/{{ tripId }}/luggage">
+    <label for="luggage-name">New Luggage:</label>
+    <input type="text" id="luggage-name" name="name" />
+    <br>
+    <label for="luggage-type">Type:</label>
+    <input type="text" id="luggage-type" name="type" />
+    <br>
+    <label for="luggage-amount">Amount:</label>
+    <input type="text" id="luggage-amount" name="amount" />
+    <button>Add</button>
+</form>
+
+{{> Footer }}

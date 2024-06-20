@@ -1,0 +1,67 @@
+erDiagram
+    USER ||--o{ USER_TRIP : has
+    USER_TRIP }o--|| TRIP : includes
+    TRIP ||--o{ ACTIVITY : includes
+    TRIP }|--|| COUNTRY : has
+    TRIP ||--o{ LUGGAGE : includes
+    TRIP ||--o{ BUDGET : includes
+    USER ||--o{ ACTIVITY : has
+    USER ||--o{ LUGGAGE : has
+    USER ||--o{ BUDGET : has
+
+    USER {
+        int id PK
+        string username
+        string email
+        string password
+        string profile_picture
+        string biography
+    }
+
+    USER_TRIP {
+        int user_id PK, FK
+        int trip_id PK, FK
+    }
+
+    TRIP {
+        int id PK
+        int country_id FK
+        string title
+        string description
+        enum status "planning | ready | in progress | complete"
+        date start_date
+        date end_date
+    }
+
+    COUNTRY {
+        int id PK
+        string name
+    }
+
+    ACTIVITY {
+        int id PK
+        string title
+        date created_at
+        date edited_at
+        int user_id FK
+        int trip_id FK
+    }
+
+    LUGGAGE {
+        int id PK
+        string name
+        int amount
+        string type
+        int user_id FK
+        int trip_id FK
+    }
+
+    BUDGET {
+        int id PK
+        string title
+        double amount_spent
+        double limit
+        double remainder
+        int user_id FK
+        int trip_id FK
+    }

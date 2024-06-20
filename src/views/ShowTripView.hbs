@@ -1,0 +1,46 @@
+{{> Header }}
+
+<img src="./../../images/waterview.jpg" id="background-image"/>
+
+<div id="trip-view" trip-id="{{trip.id}}">
+
+    <h1 id="trip-title">{{ title }}</h1>
+    <h2 id="trip-description">{{ trip.description }}</h2> <br>
+    <h3 id="trip-status">Status: {{ trip.status }}</h3>
+    <h4 id="trip-start-date">Start Date: {{formattedStartDate}}</h3>
+    <h4 id="trip-end-date">End Date: {{formattedEndDate}}</h3>
+    <h3 id="trip-other-users">Users: {{trip.users}}</h2>
+
+    <form id="update-trip-form" method="GET" action="/trips/{{ trip.id }}/edit">
+        <button id="edit-trip-form-submit-button">Edit</button>
+    </form>
+
+    <form id="delete-trip-form" method="POST" action="/trips/{{ trip.id }}">
+        <input type="hidden" name="method" value="DELETE"> 
+        <button id="delete-trip-form-submit-button">Delete</button>
+    </form>
+
+    <br>
+
+    <a href="/trips/{{trip.id}}/activities">
+        <button>Activities</button>
+    </a>
+
+    <a href="/trips/{{trip.id}}/luggage">
+        <button>Luggages</button>
+    </a>
+
+    <a href="/trips/{{trip.id}}/budget">
+        <button>Budget</button>
+    </a>
+
+<br>
+<br>
+<br>
+<h4>Add a user to the trip:</h4>
+    <form id="add-user-form" method="POST" action="/trips/{{ trip.id }}/users">
+        <label for="email">Enter user email:</label>
+        <input type="text" name="email">
+        <button>Add</button>
+    </form>
+{{> Footer }}

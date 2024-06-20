@@ -1,0 +1,36 @@
+    {{> Header }}
+    
+    <h3 id="list-activities-title">Activities:</h3>
+    <img src="./../../images/cuba.jpg" id="background-image"/>
+    <ul>
+        <table>
+                <thead>
+                    <tr>
+                        <th id="title-activity">Title</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#if activities}}
+                        {{#each activities}}
+                        <tr activity-id="{{ id }}">
+                            <td> {{ title }}</td>
+                            <td>
+                                <form id="delete-activity-form" method="POST" action="/trips/{{ tripId }}/activities/{{ id }}">
+                                    <input type="hidden" name="method" value="DELETE"> 
+                                    <button>Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    {{/if}}
+                </tbody>
+        </table>
+    </ul>
+
+<form id="new-activity-form" method="POST" action="/trips/{{ tripId }}/activities">
+    <label for="activity-title">New Activity:</label>
+    <input type="text" name="title">
+    <button>Add</button>
+</form>
+
+{{> Footer }}

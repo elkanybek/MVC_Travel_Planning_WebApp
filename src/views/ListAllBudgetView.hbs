@@ -1,0 +1,49 @@
+{{> Header }}
+<img src="./../../images/deepwater.jpg" id="background-image"/>
+
+<h3 id="listbudget-title">Budget:</h3>
+    <ul>
+        <table>
+                <thead>
+                    <tr>
+                        <th id="budgettitle">Title</th>
+                        <th id="budgetamountspent">Amount Spent</th>
+                        <th id="budgetspendinglimit">Spending Limit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#if budgets}}
+                        {{#each budgets}}
+                            <tr budget-id="{{ id }}">
+                            <td> {{ title }}</td> 
+                            <td style="padding-left: 15px;"> {{ amountSpent }}</td>
+                            <td style="padding-left: 15px;"> {{ spendingLimit }}</td>
+                            <td>
+                            <form id="delete-budget-form" method="POST" action="/trips/{{ tripId }}/budget/{{ id }}">
+                                <input type="hidden" name="method" value="DELETE"> 
+                                <button>Delete</button>
+                            </form>
+                            </td>
+                            </tr>
+                        {{/each}}
+                    {{/if}}
+                    
+                </tbody>
+        </table>
+    </ul>
+    <br>
+
+<form id="new-budget-form" method="POST" action="/trips/{{ tripId }}/budget">
+    <label for="budget-title">Budget title:</label>
+    <input type="text" id="budget-title" name="title" />
+    <br>
+    <label for="amountSpent">Amount spent:</label>
+    <input type="text" id="amountSpent" name="amountSpent" />
+    <br>
+    <label for="spendingLimit">Limit:</label>
+    <input type="text" id="spendingLimit" name="spendingLimit" />
+    <br>
+    <button>Add</button>
+</form>
+
+{{> Footer }}
