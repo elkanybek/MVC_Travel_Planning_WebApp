@@ -1,7 +1,7 @@
 # Traveloo
 
 > By [Elsana Kanybek](https://github.com/elkanybek) and [Joseph Lehman](https://github.com/joeyl83)
->> Web Programming II Final Project- Winter 2024
+>> This project was developed for Web Programming 3 course at John Abbott College.
 
 Go to demo: [Webpage Demo](#webpage-demonstration) (click here)
 
